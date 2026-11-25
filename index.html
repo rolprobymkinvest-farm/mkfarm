@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M.K INVEST SARL — Présentation & Activités</title>
+  <meta name="description" content="M.K INVEST SARL : élevage de poulets de chair, transformation, sous-produits et distribution." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mk: {
+              50: '#faf6fc',
+              100: '#f1e6f7',
+              200: '#e2c9ef',
+              600: '#6e2c8a',
+              700: '#592172',
+              800: '#431857',
+              900: '#2d0f3b',
+            },
+            accent: {
+              50: '#fdf8f3',
+              600: '#9c5a2b',
+              700: '#7d451e',
+            }
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-mk-50 text-stone-800 antialiased selection:bg-mk-700 selection:text-white">
+
+  <!-- Barre de navigation supérieure -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-mk-200/70 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <!-- Logo & Nom de l'entreprise -->
+      <a href="#" class="flex items-center gap-3 min-w-0">
+        <img
+          src="assets/logo mk invest new jpeg.jpg"
+          alt="Logo M.K INVEST"
+          class="w-11 h-11 rounded-lg object-contain bg-white border border-mk-100 p-0.5 shrink-0"
+        />
+        <span class="font-bold text-mk-900 text-base sm:text-lg tracking-tight truncate">
+          M.K INVEST SARL
+        </span>
+      </a>
+
+      <!-- Navigation bureau -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-stone-700">
+        <a href="#entreprise" class="hover:text-mk-700 transition">L'entreprise</a>
+        <a href="#activites" class="hover:text-mk-700 transition">Nos activités</a>
+        <a href="#distribution" class="hover:text-mk-700 transition">Distribution</a>
+        <a href="#engagements" class="hover:text-mk-700 transition">Engagements</a>
+      </nav>
+
+      <!-- Bouton Se connecter (coin supérieur droit) + Menu mobile -->
+      <div class="flex items-center gap-2.5 shrink-0">
+        <button
+          id="openLoginBtn"
+          type="button"
+          class="inline-flex items-center gap-2 rounded-lg bg-mk-700 hover:bg-mk-800 active:scale-[0.99] text-white text-xs sm:text-sm font-semibold px-3.5 py-2 sm:px-4 sm:py-2.5 shadow-xs transition cursor-pointer"
+        >
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+          </svg>
+          <span>Se connecter</span>
+        </button>
+
+        <button
+          id="mobileMenuBtn"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          class="md:hidden inline-flex items-center justify-center rounded-lg border border-mk-200 p-2 text-mk-900 hover:bg-mk-100"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-mk-200/70 bg-white px-4 py-3 space-y-2 text-sm font-medium text-stone-700">
+      <a href="#entreprise" class="block py-1.5 hover:text-mk-700">L'entreprise</a>
+      <a href="#activites" class="block py-1.5 hover:text-mk-700">Nos activités</a>
+      <a href="#distribution" class="block py-1.5 hover:text-mk-700">Distribution</a>
+      <a href="#engagements" class="block py-1.5 hover:text-mk-700">Engagements</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section Héro / Présentation de l'entreprise -->
+    <section id="entreprise" class="bg-gradient-to-br from-mk-900 via-mk-800 to-mk-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <span class="inline-block rounded-full bg-white/15 border border-white/20 px-3.5 py-1 text-xs font-semibold tracking-wide text-mk-100">
+            M.K INVEST SARL • RC/DLA/2019/B/2193
+          </span>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Élevage avicole, transformation et distribution de qualité.
+          </h1>
+          <p class="text-base sm:text-lg text-mk-100/95 max-w-2xl leading-relaxed">
+            <strong>M.K INVEST SARL</strong> est une entreprise camerounaise dédiée à la production de poulets de chair, à la transformation des produits avicoles, à la valorisation des sous-produits et à la distribution auprès des professionnels et des particuliers.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-1">
+            <a href="#activites" class="inline-flex items-center justify-center rounded-lg bg-white text-mk-900 hover:bg-mk-100 font-semibold text-sm px-5 py-3 transition">
+              Voir nos activités
+            </a>
+            <a href="#distribution" class="inline-flex items-center justify-center rounded-lg border border-white/35 bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-5 py-3 transition">
+              Nos canaux de distribution
+            </a>
+          </div>
+        </div>
+
+        <!-- Présentation visuelle du logo et de l'identité -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-sm rounded-2xl bg-white p-6 shadow-xl border border-mk-200 text-center space-y-4">
+            <img
+              src="assets/logo mk invest new jpeg.jpg"
+              alt="Emblème M.K INVEST"
+              class="w-44 h-44 mx-auto object-contain"
+            />
+            <div class="pt-2 border-t border-stone-100">
+              <p class="font-bold text-mk-900 text-base">M.K INVEST SARL</p>
+              <p class="text-xs text-stone-600 mt-1">
+                Qualité • Fraîcheur • Proximité • Engagement local
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Activités -->
+    <section id="activites" class="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-mk-700">Ce que nous faisons</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-mk-900 mt-1">
+          Nos activités principales
+        </h2>
+        <p class="text-stone-600 mt-2">
+          Une organisation structurée autour de l'élevage des poulets de chair, de la transformation et de la valorisation des sous-produits.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-7">
+        <!-- Activité 1 : Élevage & découpes -->
+        <article class="bg-white rounded-2xl border border-mk-200/70 overflow-hidden shadow-xs flex flex-col">
+          <div class="h-48 w-full overflow-hidden bg-mk-50">
+            <img
+              src="assets/Poulet 2.jpeg"
+              alt="Poulet entier et découpe fraîche M.K INVEST"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-mk-700">01 • Élevage</span>
+              <h3 class="text-lg font-bold text-mk-900 mt-1">Poulets de Chair & Découpes</h3>
+              <p class="text-sm text-stone-600 mt-2 leading-relaxed">
+                Élevage suivi de souches de poulets de chair (<em>Cobb 500</em>, <em>Hubbard</em>, <em>Ross</em>) avec attention portée à la santé animale, à l'alimentation et à la fraîcheur.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-sm text-stone-700 list-disc list-inside">
+                <li>Poulets vivants calibrés</li>
+                <li>Poulets abattus et éviscérés</li>
+                <li>Pièces découpées (cuisses, ailes, blancs)</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Activité 2 : Transformation -->
+        <article class="bg-white rounded-2xl border border-mk-200/70 overflow-hidden shadow-xs flex flex-col">
+          <div class="h-48 w-full overflow-hidden bg-mk-50">
+            <img
+              src="assets/images poulet fumé.jpg"
+              alt="Poulet fumé et produits transformés M.K INVEST"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-accent-700">02 • Transformation</span>
+              <h3 class="text-lg font-bold text-mk-900 mt-1">Produits Transformés</h3>
+              <p class="text-sm text-stone-600 mt-2 leading-relaxed">
+                Préparation et transformation des produits avicoles pour offrir des solutions pratiques et savoureuses aux foyers, restaurants et points de vente.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-sm text-stone-700 list-disc list-inside">
+                <li>Poulets fumés aux épices</li>
+                <li>Saucisses de poulet</li>
+                <li>Conditionnement hygiénique</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Activité 3 : Sous-produits & valorisation -->
+        <article class="bg-white rounded-2xl border border-mk-200/70 overflow-hidden shadow-xs flex flex-col">
+          <div class="h-48 w-full bg-gradient-to-br from-mk-100 via-mk-50 to-accent-50 flex flex-col items-center justify-center p-6 text-center border-b border-mk-100">
+            <span class="w-12 h-12 rounded-xl bg-mk-700 text-white font-extrabold flex items-center justify-center text-base shadow-xs">
+              03
+            </span>
+            <span class="text-xs font-semibold text-mk-800 mt-3">Économie circulaire & abats</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-mk-700">03 • Sous-produits</span>
+              <h3 class="text-lg font-bold text-mk-900 mt-1">Abats & Valorisation Agricole</h3>
+              <p class="text-sm text-stone-600 mt-2 leading-relaxed">
+                Valorisation complète de chaque lot d'exploitation, des abats recherchés jusqu'aux intrants organiques pour l'agriculture.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-sm text-stone-700 list-disc list-inside">
+                <li>Gésiers, foies et pattes</li>
+                <li>Autres sous-produits (graisses, boyaux, têtes)</li>
+                <li>Fientes valorisées pour l'agriculture</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section Distribution -->
+    <section id="distribution" class="bg-white border-y border-mk-200/70 py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10">
+          <span class="text-xs font-bold uppercase tracking-wider text-mk-700">Présence & proximité</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-mk-900 mt-1">
+            Distribution et points de vente
+          </h2>
+          <p class="text-stone-600 mt-2">
+            Nos produits sont distribués à travers des partenariats professionnels, des points de vente dédiés et la vente directe.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="rounded-xl bg-mk-50 border border-mk-200/70 p-5">
+            <h3 class="font-bold text-mk-900 text-sm">Grande Distribution (GMS)</h3>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+              Fourniture de supermarchés et enseignes de distribution avec exigence de régularité et de qualité.
+            </p>
+          </div>
+          <div class="rounded-xl bg-mk-50 border border-mk-200/70 p-5">
+            <h3 class="font-bold text-mk-900 text-sm">HORECA & Grossistes</h3>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+              Approvisionnement des hôtels, restaurants, traiteurs et grossistes selon les formats et découpes souhaités.
+            </p>
+          </div>
+          <div class="rounded-xl bg-mk-50 border border-mk-200/70 p-5">
+            <h3 class="font-bold text-mk-900 text-sm">La Boucherie du Fermier - M.K PRESTIGE</h3>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+              Point de vente de proximité proposant volailles fraîches, produits transformés et viandes complémentaires.
+            </p>
+          </div>
+          <div class="rounded-xl bg-mk-50 border border-mk-200/70 p-5">
+            <h3 class="font-bold text-mk-900 text-sm">Particuliers & Commande Directe</h3>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+              Vente directe aux particuliers et revendeuses avec un service réactif et une livraison organisée.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Engagements -->
+    <section id="engagements" class="py-16 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-mk-700">Nos standards</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-mk-900 mt-1">
+          Qualité, biosécurité et responsabilité
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-white rounded-xl border border-mk-200/70 p-5">
+          <h3 class="font-bold text-mk-900 text-sm">Conformité & Hygiène</h3>
+          <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+            Respect des règles sanitaires vétérinaires, de biosécurité et de transport des produits d'origine animale.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl border border-mk-200/70 p-5">
+          <h3 class="font-bold text-mk-900 text-sm">Maîtrise Énergétique</h3>
+          <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+            Recours complémentaire à l'éclairage solaire pour soutenir la continuité de l'activité face aux aléas électriques.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl border border-mk-200/70 p-5">
+          <h3 class="font-bold text-mk-900 text-sm">Capital Humain</h3>
+          <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+            Valorisation de l'emploi local et formation continue des équipes aux bonnes pratiques d'élevage et d'hygiène.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl border border-mk-200/70 p-5">
+          <h3 class="font-bold text-mk-900 text-sm">Production Locale</h3>
+          <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+            Contribution active à l'offre locale en protéines animales fraîches et durables.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="bg-mk-900 text-mk-100 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img
+          src="assets/logo mk invest new jpeg.jpg"
+          alt="Logo M.K INVEST"
+          class="w-10 h-10 rounded-lg object-contain bg-white p-0.5 shrink-0"
+        />
+        <div>
+          <p class="font-bold text-white text-sm">M.K INVEST SARL</p>
+          <p class="text-xs text-mk-200/80">
+            Douala, Cameroun • RCCM : RC/DLA/2019/B/2193
+          </p>
+        </div>
+      </div>
+      <button
+        type="button"
+        onclick="document.getElementById('openLoginBtn').click()"
+        class="rounded-lg bg-mk-600 hover:bg-mk-700 text-white text-xs font-semibold px-4 py-2.5 transition cursor-pointer"
+      >
+        Se connecter à l'application
+      </button>
+    </div>
+  </footer>
+
+  <!-- Modale de connexion -->
+  <div
+    id="loginModal"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-mk-900/65 backdrop-blur-xs p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="loginModalTitle"
+  >
+    <div class="w-full max-w-md rounded-2xl bg-white shadow-2xl border border-mk-200 overflow-hidden">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-mk-100 bg-mk-50">
+        <div>
+          <h2 id="loginModalTitle" class="text-base font-bold text-mk-900">
+            Connexion — M.K INVEST SARL
+          </h2>
+          <p class="text-xs text-stone-500">Accès à l'espace de gestion</p>
+        </div>
+        <button
+          id="closeLoginBtn"
+          type="button"
+          aria-label="Fermer la fenêtre de connexion"
+          class="rounded-lg p-1.5 text-stone-500 hover:bg-mk-100 hover:text-mk-900 transition cursor-pointer"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <form id="loginForm" class="p-6 space-y-4">
+        <div>
+          <label for="loginIdentifier" class="block text-xs font-semibold text-stone-700 mb-1">
+            Identifiant, téléphone ou e-mail
+          </label>
+          <input
+            id="loginIdentifier"
+            type="text"
+            required
+            placeholder="ex. gestion@mkinvest.cm ou +237 6XX..."
+            class="w-full rounded-lg border border-stone-300 px-3.5 py-2.5 text-sm text-stone-900 focus:border-mk-700 focus:outline-none focus:ring-2 focus:ring-mk-700/20"
+          />
+        </div>
+
+        <div>
+          <label for="loginPassword" class="block text-xs font-semibold text-stone-700 mb-1">
+            Mot de passe
+          </label>
+          <input
+            id="loginPassword"
+            type="password"
+            required
+            placeholder="••••••••"
+            class="w-full rounded-lg border border-stone-300 px-3.5 py-2.5 text-sm text-stone-900 focus:border-mk-700 focus:outline-none focus:ring-2 focus:ring-mk-700/20"
+          />
+        </div>
+
+        <div>
+          <label for="loginRoleHint" class="block text-xs font-semibold text-stone-700 mb-1">
+            Profil d'accès (prévisualisation)
+          </label>
+          <select
+            id="loginRoleHint"
+            class="w-full rounded-lg border border-stone-300 px-3.5 py-2.5 text-sm text-stone-900 bg-white focus:border-mk-700 focus:outline-none focus:ring-2 focus:ring-mk-700/20"
+          >
+            <option value="GERANT">Direction / Gérance & Associé-Gérant</option>
+            <option value="REX">Responsable d'Exploitation (REX)</option>
+            <option value="RLA">Responsable Logistique & Approvisionnements (RLA)</option>
+            <option value="RAF">Administration, Finance & Comptabilité (RAF / CF)</option>
+            <option value="COMMERCIAL">Commercial & Points de vente</option>
+            <option value="AGENT_AVICOLE">Agent Avicole / Commis / Chauffeur (Terrain)</option>
+          </select>
+        </div>
+
+        <div id="loginFeedback" class="hidden rounded-lg bg-mk-50 border border-mk-700/25 px-3.5 py-2.5 text-xs text-mk-900"></div>
+
+        <button
+          type="submit"
+          class="w-full rounded-lg bg-mk-700 hover:bg-mk-800 text-white font-semibold text-sm py-2.5 transition cursor-pointer"
+        >
+          Se connecter à l'application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Menu mobile
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded', String(isHidden));
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Modale de connexion
+    const loginModal = document.getElementById('loginModal');
+    const openLoginBtn = document.getElementById('openLoginBtn');
+    const closeLoginBtn = document.getElementById('closeLoginBtn');
+    const loginForm = document.getElementById('loginForm');
+    const loginFeedback = document.getElementById('loginFeedback');
+
+    function openModal() {
+      loginModal.classList.remove('hidden');
+      loginModal.classList.add('flex');
+      document.getElementById('loginIdentifier').focus();
+    }
+
+    function closeModal() {
+      loginModal.classList.add('hidden');
+      loginModal.classList.remove('flex');
+      loginFeedback.classList.add('hidden');
+    }
+
+    openLoginBtn.addEventListener('click', openModal);
+    closeLoginBtn.addEventListener('click', closeModal);
+
+    loginModal.addEventListener('click', (event) => {
+      if (event.target === loginModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !loginModal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const roleSelect = document.getElementById('loginRoleHint');
+      const roleLabel = roleSelect.options[roleSelect.selectedIndex].text;
+      const identifier = document.getElementById('loginIdentifier').value.trim();
+
+      sessionStorage.setItem('mk_preview_user', JSON.stringify({
+        identifier,
+        role: roleSelect.value,
+        roleLabel,
+        connectedAt: new Date().toISOString()
+      }));
+
+      loginFeedback.textContent = `Session de prévisualisation préparée (${roleLabel}).`;
+      loginFeedback.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
