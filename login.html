@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion — M.K INVEST SARL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mk: {
+              50: '#faf6fc',
+              100: '#f1e6f7',
+              200: '#e2c9ef',
+              600: '#6e2c8a',
+              700: '#592172',
+              800: '#431857',
+              900: '#2d0f3b',
+            }
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="min-h-screen bg-mk-50 text-stone-800 antialiased flex flex-col">
+
+  <!-- En-tête minimaliste -->
+  <header class="bg-white border-b border-mk-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 min-w-0">
+        <img
+          src="assets/logo mk invest new jpeg.jpg"
+          alt="Logo M.K INVEST"
+          class="w-10 h-10 rounded-lg object-contain bg-white border border-mk-100 p-0.5 shrink-0"
+        />
+        <span class="font-bold text-mk-900 text-base sm:text-lg tracking-tight truncate">
+          M.K INVEST SARL
+        </span>
+      </a>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <span
+          id="networkBadge"
+          class="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200"
+        >
+          <span id="networkDot" class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span id="networkText">En ligne</span>
+        </span>
+
+        <a
+          href="index.html"
+          class="text-xs sm:text-sm font-medium text-mk-700 hover:text-mk-900 px-3 py-2 rounded-lg hover:bg-mk-100/60 transition"
+        >
+          Retour à l'accueil
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenu principal centré -->
+  <main class="flex-1 flex items-center justify-center px-4 py-10">
+    <div class="w-full max-w-4xl grid lg:grid-cols-12 rounded-2xl bg-white border border-mk-200/80 shadow-lg overflow-hidden">
+
+      <!-- Colonne gauche : identité visuelle -->
+      <div class="lg:col-span-5 bg-gradient-to-br from-mk-900 via-mk-800 to-mk-700 text-white p-8 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="w-16 h-16 rounded-2xl bg-white p-1.5 shadow-md">
+            <img
+              src="assets/logo mk invest new jpeg.jpg"
+              alt="Logo M.K INVEST"
+              class="w-full h-full object-contain"
+            />
+          </div>
+          <h1 class="text-2xl font-bold leading-snug">
+            Espace de gestion et d'exploitation
+          </h1>
+          <p class="text-sm text-mk-100/90 leading-relaxed">
+            Connectez-vous pour accéder au suivi de l'élevage, à la transformation, aux stocks, aux ventes et au pilotage de l'activité.
+          </p>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-white/15 text-xs text-mk-100/80 space-y-1">
+          <p class="font-semibold text-white">M.K INVEST SARL</p>
+          <p>RCCM : RC/DLA/2019/B/2193</p>
+          <p>Accès multi-supports (PC, tablette, smartphone)</p>
+        </div>
+      </div>
+
+      <!-- Colonne droite : formulaire de connexion -->
+      <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-center">
+        <div class="mb-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-mk-700">Authentification</span>
+          <h2 class="text-2xl font-bold text-mk-900 mt-1">Connexion à votre espace</h2>
+          <p class="text-sm text-stone-500 mt-1">
+            Saisissez vos identifiants pour ouvrir votre session de travail.
+          </p>
+        </div>
+
+        <form id="loginPageForm" class="space-y-4">
+          <div>
+            <label for="identifier" class="block text-xs font-semibold text-stone-700 mb-1.5">
+              Identifiant, téléphone ou adresse e-mail
+            </label>
+            <input
+              id="identifier"
+              name="identifier"
+              type="text"
+              autocomplete="username"
+              required
+              placeholder="ex. rex@mkinvest.cm ou +237 6XX XXX XXX"
+              class="w-full rounded-xl border border-stone-300 px-4 py-2.5 text-sm text-stone-900 placeholder:text-stone-400 focus:border-mk-700 focus:outline-none focus:ring-2 focus:ring-mk-700/20"
+            />
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <label for="password" class="block text-xs font-semibold text-stone-700">
+                Mot de passe
+              </label>
+              <button
+                type="button"
+                id="togglePasswordBtn"
+                class="text-xs font-medium text-mk-700 hover:text-mk-900 cursor-pointer"
+              >
+                Afficher
+              </button>
+            </div>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              placeholder="••••••••"
+              class="w-full rounded-xl border border-stone-300 px-4 py-2.5 text-sm text-stone-900 placeholder:text-stone-400 focus:border-mk-700 focus:outline-none focus:ring-2 focus:ring-mk-700/20"
+            />
+          </div>
+
+          <div class="flex items-center justify-between text-xs text-stone-600 pt-1">
+            <label class="inline-flex items-center gap-2 cursor-pointer">
+              <input
+                id="rememberSession"
+                type="checkbox"
+                checked
+                class="rounded border-stone-300 text-mk-700 focus:ring-mk-700"
+              />
+              <span>Maintenir la session sur cet appareil</span>
+            </label>
+            <span id="resetInfoTrigger" class="text-mk-700 hover:underline cursor-pointer">
+              Accès oublié ?
+            </span>
+          </div>
+
+          <div
+            id="formAlert"
+            class="hidden rounded-xl border px-4 py-3 text-xs leading-relaxed"
+            role="status"
+          ></div>
+
+          <button
+            type="submit"
+            class="w-full rounded-xl bg-mk-700 hover:bg-mk-800 active:scale-[0.99] text-white font-semibold text-sm py-3 shadow-sm transition cursor-pointer"
+          >
+            Se connecter
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Détection de l'état réseau (utile pour le terrain)
+    const networkBadge = document.getElementById('networkBadge');
+    const networkDot = document.getElementById('networkDot');
+    const networkText = document.getElementById('networkText');
+
+    function updateNetworkStatus() {
+      const online = navigator.onLine;
+      if (online) {
+        networkBadge.className = 'inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200';
+        networkDot.className = 'w-2 h-2 rounded-full bg-emerald-500';
+        networkText.textContent = 'En ligne';
+      } else {
+        networkBadge.className = 'inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium bg-amber-50 text-amber-800 border border-amber-300';
+        networkDot.className = 'w-2 h-2 rounded-full bg-amber-500';
+        networkText.textContent = 'Hors-ligne';
+      }
+    }
+
+    window.addEventListener('online', updateNetworkStatus);
+    window.addEventListener('offline', updateNetworkStatus);
+    updateNetworkStatus();
+
+    // Afficher / masquer le mot de passe
+    const passwordInput = document.getElementById('password');
+    const togglePasswordBtn = document.getElementById('togglePasswordBtn');
+    togglePasswordBtn.addEventListener('click', () => {
+      const isPassword = passwordInput.type === 'password';
+      passwordInput.type = isPassword ? 'text' : 'password';
+      togglePasswordBtn.textContent = isPassword ? 'Masquer' : 'Afficher';
+    });
+
+    // Info réinitialisation
+    const formAlert = document.getElementById('formAlert');
+    document.getElementById('resetInfoTrigger').addEventListener('click', () => {
+      formAlert.className = 'rounded-xl border border-mk-200 bg-mk-50 text-mk-900 px-4 py-3 text-xs leading-relaxed';
+      formAlert.textContent = 'En phase de déploiement, la réinitialisation des comptes est gérée par la Direction / l’administrateur de l’application.';
+      formAlert.classList.remove('hidden');
+    });
+
+    // Soumission du formulaire de connexion
+    const loginPageForm = document.getElementById('loginPageForm');
+    loginPageForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const identifier = document.getElementById('identifier').value.trim();
+      const remember = document.getElementById('rememberSession').checked;
+
+      const sessionData = {
+        identifier,
+        onlineAtLogin: navigator.onLine,
+        loggedInAt: new Date().toISOString()
+      };
+
+      sessionStorage.setItem('mk_current_session', JSON.stringify(sessionData));
+      if (remember) {
+        localStorage.setItem('mk_remembered_session', JSON.stringify(sessionData));
+      } else {
+        localStorage.removeItem('mk_remembered_session');
+      }
+
+      formAlert.className = 'rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-900 px-4 py-3 text-xs leading-relaxed';
+      formAlert.textContent = `Connexion enregistrée pour "${identifier}". Redirection vers le tableau de bord...`;
+      formAlert.classList.remove('hidden');
+
+      setTimeout(() => {
+        window.location.href = 'dashboard.html';
+      }, 600);
+    });
+
+    // Pré-remplissage éventuel si une session a été mémorisée
+    const saved = localStorage.getItem('mk_remembered_session');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (parsed.identifier) {
+          document.getElementById('identifier').value = parsed.identifier;
+        }
+      } catch (e) {
+        // Ignorer si donnée malformée
+      }
+    }
+  </script>
+</body>
+</html>
